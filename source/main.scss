@@ -1,0 +1,98 @@
+@use 'config/reset.scss';
+@use 'config/variaveis.scss';
+
+body{
+    background-color: variaveis.$corBody;
+}
+
+li{
+    list-style: variaveis.$invisiVel;
+}
+
+.container{
+    max-width: variaveis.$largurMax;
+    width: variaveis.$largurA;
+    margin: variaveis.$margEM;
+}
+
+header{
+    background-color:variaveis.$corFundo;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+header .container{
+    display: variaveis.$nomesLadoAlado;
+    justify-content: space-between;
+    align-items: variaveis.$centro;
+    padding: 16px 0;
+}
+
+.menu{
+    display: variaveis.$nomesLadoAlado;
+}
+
+.menu li {
+    font-weight: bold;
+    margin-left: 24px;
+}
+
+.menu li a {
+    color: variaveis.$corLetras ;
+    text-decoration: variaveis.$invisiVel;
+}
+
+section{
+    padding: 56px 0;
+}
+
+.products {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 32.66%);
+    column-gap: 1%;
+    row-gap: 4%;
+    width: 100%;
+}
+
+.product-item img {
+    width: 100%;
+    border-radius: 16px;
+}
+
+.product-button {
+    display: block;
+    background-color: variaveis.$corBtn;
+    color: variaveis.$corLetras;
+    text-align: variaveis.$centro;
+    padding: 8px 0;
+    border-radius: 8px;
+    margin-top: 8px;
+    text-decoration: variaveis.$invisiVel;
+}
+
+.product-button:hover{
+    background-color: variaveis.$corHover;
+}
+
+@media screen and (max-width: variaveis.$tablet) {
+    .container {
+        max-width: 80%;
+    }
+
+    .products {
+        grid-template-columns: repeat(2, 48.5%);
+        column-gap: 3%;
+    }
+}
+
+@media screen and (max-width: variaveis.$mobile) {
+    .products {
+        display: block;
+    }
+
+    .product-item  {
+        margin-bottom: 32px;
+    }
+}
